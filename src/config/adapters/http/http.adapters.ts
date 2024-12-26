@@ -1,0 +1,5 @@
+class HttpAdapter {
+    constructor(parameters) {
+        
+    }
+}
