@@ -22,7 +22,7 @@ const MoviePoster = ({movie, height = 420, width = 300}: Props) => {
         paddingBottom: 20,
         paddingHorizontal: 10,
       })}>
-      <View style={[styles.imageContainer, {width: 300, height: 400}]}>
+      <View style={[styles.imageContainer]}>
         <Image source={{uri: movie.poster}} style={styles.image} />
       </View>
     </Pressable>
