@@ -1,11 +1,5 @@
 // Archivo actual: MoviePoster
-import {
-  View,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  Pressable,
-} from 'react-native';
+import {View, Image, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
 import {Movie} from '../../../core/entities/movie.entity';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
