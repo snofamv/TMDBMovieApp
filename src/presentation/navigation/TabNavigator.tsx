@@ -3,8 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {RootStackParams} from './StackNavigator';
 import HomeScreen from '../screens/home/HomeScreen';
-import MoviesScreen from '../screens/movies/MoviesScreen';
-import MenuScreen from '../screens/menu/MenuScreen';
+import DetailsScreen from '../screens/details/DetailsScreen';
 
 const Tab = createBottomTabNavigator<RootStackParams>();
 const TabNavigator = () => {
@@ -14,8 +13,7 @@ const TabNavigator = () => {
         headerShown: false,
       }}>
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Movies" component={MoviesScreen} />
-      <Tab.Screen name="Menu" component={MenuScreen} />
+      <Tab.Screen name="Details" component={DetailsScreen} />
     </Tab.Navigator>
   );
 };
