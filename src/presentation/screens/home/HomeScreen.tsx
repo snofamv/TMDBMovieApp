@@ -1,10 +1,11 @@
 // Archivo actual: HomeScreen
-import {View, ScrollView, Text} from 'react-native';
+import {View, ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 import PosterCarousel from '../../components/movies/PosterCarousel';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useMovies} from '../../hooks/useMovies';
 import HorizontalCarousel from '../../components/movies/HorizontalCarousel';
+import FullScreenLoader from '../../components/loaders/FullScreenLoader';
 
 const HomeScreen = () => {
   const {top} = useSafeAreaInsets();
@@ -12,11 +13,11 @@ const HomeScreen = () => {
     useMovies();
 
   if (isLoading) {
-    return <Text>Cargando....</Text>;
+    return <FullScreenLoader />;
   }
   return (
     <ScrollView>
-      <View style={{marginTop: top + 20, paddingBottom: 30}}>
+      <View style={{...styles.container, marginTop: top + 20}}>
         {/* Principal */}
         <PosterCarousel movies={nowPlaying} />
         {/* Populares */}
@@ -33,5 +34,9 @@ const HomeScreen = () => {
     </ScrollView>
   );
 };
-
+const styles = StyleSheet.create({
+  container: {
+    paddingBottom: 30,
+  },
+});
 export default HomeScreen;

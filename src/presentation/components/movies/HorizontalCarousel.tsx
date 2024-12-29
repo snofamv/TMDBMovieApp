@@ -43,8 +43,6 @@ const HorizontalCarousel = ({movies, title, loadNextPage}: Props) => {
   return (
     <View>
       <Text style={styles.title}>{title}</Text>
-      {/* <MoviePoster movie={movie} /> */}
-      {/* Flatlist carga de manera dinamica los elementos */}
       <FlatList
         data={movies}
         renderItem={({item}) => (
@@ -52,7 +50,6 @@ const HorizontalCarousel = ({movies, title, loadNextPage}: Props) => {
         )}
         keyExtractor={(item, index) => {
           const key = `${item.title}-${index}-${item.id}`;
-          console.log(key);
           return key;
         }}
         horizontal

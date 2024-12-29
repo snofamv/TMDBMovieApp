@@ -1,5 +1,5 @@
 // Archivo actual: PosterCarousel
-import {View, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
 import {Movie} from '../../../core/entities/movie.entity';
@@ -20,12 +20,5 @@ const PosterCarousel = ({movies, height = 440}: Props) => {
     </View>
   );
 };
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default PosterCarousel;

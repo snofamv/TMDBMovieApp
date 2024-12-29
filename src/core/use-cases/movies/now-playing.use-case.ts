@@ -13,8 +13,6 @@ export const moviesNowPlayingUseCase = async (
     const nowPlaying = await fetcher.get<NowPlayingResponse>(
       '/movie/now_playing',
     );
-    // console.log({nowPlaying});
-    // retornamos los datos reestructurados con el mapper
     return nowPlaying.results.map(result =>
       MovieMapper.fromMovieDbResultToEntity(result),
     );
